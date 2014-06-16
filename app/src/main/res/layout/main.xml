@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
+
+    <SurfaceView
+        android:id="@+id/surfaceViewCamera"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/buttonFocus"
+        android:layout_below="@+id/surfaceViewRender"
+        >
+    </SurfaceView>
+    <de.renard.camerapreview.TextBlockIndicatorView
+        android:id="@+id/textBlockIndicatorView"
+        android:layout_alignLeft="@+id/surfaceViewCamera"
+        android:layout_alignRight="@+id/surfaceViewCamera"
+        android:layout_alignTop="@+id/surfaceViewCamera"
+        android:layout_alignBottom="@+id/surfaceViewCamera"
+        android:layout_width="0dp"
+        android:layout_height="0dp" />
+
+    <SurfaceView
+        android:id="@+id/surfaceViewRender"
+        android:layout_width="288px"
+        android:layout_height="354px">
+    </SurfaceView>
+
+    <Button
+        android:layout_alignParentBottom="true"
+        android:id="@+id/buttonShutter"
+        android:layout_width="100dip"
+        android:layout_height="wrap_content"
+        android:text="make photo" />
+
+    <Button
+        android:layout_alignParentBottom="true"
+        android:id="@+id/buttonFocus"
+        android:layout_width="100dip"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/buttonShutter"
+        android:text="focus!" />
+
+</RelativeLayout>
